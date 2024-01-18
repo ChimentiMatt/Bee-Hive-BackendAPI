@@ -1,6 +1,10 @@
 from datetime import timedelta
 from pathlib import Path
 import django_on_heroku
+from dotenv import load_dotenv
+load_dotenv()
+
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # will be changed in production 😉
-SECRET_KEY = 'django-insecure-^d2e65#(84_9-+(sa7(wej0^0p$yhya%x)--21y0v=-8)&)4ly'
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
