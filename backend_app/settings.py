@@ -42,11 +42,11 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "https://bee-hive-frontend-6a962880db42.herokuapp.com/",
+    "http://localhost:5173",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://bee-hive-frontend-6a962880db42.herokuapp.com/",
+    "http://localhost:5173",
 ]
 
 INSTALLED_APPS = [
