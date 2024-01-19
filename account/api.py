@@ -28,5 +28,8 @@ def signup(request):
 
     if form.is_valid():
         form.save()
+    
+    else:
+        message = form.errors.as_json()
 
     return JsonResponse({'status': message})
